@@ -21,6 +21,10 @@ client.on("message", async (message) => {
   }
 });
 
+app.get("/", (request, response) => {
+  return response.send({ hello: "World" });
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 3000}`);
 });
