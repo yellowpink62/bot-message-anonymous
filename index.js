@@ -14,7 +14,13 @@ client.on("message", async (message) => {
       const channel = client.channels.cache.find(
         (c) => c.id === process.env.DISCORD_CHANNEL
       );
-      channel.send(content);
+      channel.send('', {
+        embed: {
+            title: '',
+            description: content,
+            color: 16774957
+          }
+      });
     } catch (error) {
       console.log(error);
     }
